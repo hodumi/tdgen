@@ -7,9 +7,11 @@
 
 
 ## 使い方(予定)
-1. 以下の2つのファイルを作成する。
+以下の2つのファイルを作成する。
 
-``` javascript:data.js
+- data.js
+
+```javascript
 var gen = require('/path/to/test-data-generater/generater.js');
 var res = require('/path/to/test-data-generater/resource.js');
 
@@ -21,20 +23,18 @@ module.exports = {
 }
 ```
 
-``` sql:template.sql
+
+- template.sql
+
+```sql
 insert into user (id, name, age, score) values ( {{id}}, '{{name}}', {{age}}, '{{note}}' );
 insert into user (id, name, age, score) values ( {{id}}, '{{name}}', {{age}}, '{{note}}' );
 ```
 
-2. コマンドを実行する。(未実装)
+コマンドを実行する。(未実装)
 
-``` shell
+```shell
 $ tdgen --template template.sql --data data.js
-```
-
-3. 標準出力に出力される。
-
-``` sql
 insert into user (id, name, age, score) values ( 1, 'John Doe', 15, 'test test test');
 insert into user (id, name, age, score) values ( 2, 'Jane Doe', 13, 'test test test');
 ```
