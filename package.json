@@ -1,14 +1,19 @@
 {
-  "name": "test-data-maker",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "handlebars": "^4.0.5"
-  }
+    "name": "tdgen",
+    "version": "1.0.0",
+    "description": "",
+    "bin": {
+	"tdgen": "./bin/tdgen.js"
+    },
+    "scripts": {
+	"test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "preferGlobal": true,
+    "dependencies": {
+	"commander": "^2.9.0",
+	"handlebars": "^4.0.5"
+    }
+
 }

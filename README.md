@@ -2,11 +2,11 @@
 mustacheのテンプレートファイルから、テストデータを作成するツール
 
 ## TODO
-- [ ] シェルコマンドとして実行可能とする。(現在コード内に直接かかれているため)
+- [x] シェルコマンドとして実行可能とする。
 - [ ] ランダム出力を一様分布以外の確率分布で出力できるようにする。(正規分布とか、指数分布とか)
 
 
-## 使い方(予定)
+## 使い方
 以下の2つのファイルを作成する。
 
 - data.js
@@ -31,10 +31,10 @@ insert into user (id, name, age, score) values ( {{id}}, '{{name}}', {{age}}, '{
 insert into user (id, name, age, score) values ( {{id}}, '{{name}}', {{age}}, '{{note}}' );
 ```
 
-コマンドを実行する。(未実装)
+コマンドを実行する。
 
 ```shell
-$ tdgen --template template.sql --data data.js
+$ tdgen template.sql data.js
 insert into user (id, name, age, score) values ( 1, 'John Doe', 15, 'test test test');
 insert into user (id, name, age, score) values ( 2, 'Jane Doe', 13, 'test test test');
 ```
