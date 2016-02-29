@@ -1,3 +1,4 @@
+'use strict';
 var fs = require('fs');
 
 // minからmaxまでの整数を返す。

@@ -16,6 +16,6 @@ module.exports = {
 	// output test-data
 
 	// console.log(data);
-	console.log(tmp(data));
+	console.log(tmp(data(require('./generater.js'), require('./resource.js'))));
     }
 };
