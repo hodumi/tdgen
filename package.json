@@ -1,19 +1,23 @@
 {
-    "name": "tdgen",
-    "version": "1.0.0",
-    "description": "",
-    "bin": {
-	"tdgen": "./bin/tdgen.js"
-    },
-    "scripts": {
-	"test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC",
-    "preferGlobal": true,
-    "dependencies": {
-	"commander": "^2.9.0",
-	"handlebars": "^4.0.5"
-    }
-
+  "name": "tdgen",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "tdgen": "./bin/tdgen.js"
+  },
+  "scripts": {
+      "start": "node ./bin/tdgen.js",
+      "test": "./node_modules/.bin/mocha test/*.js --colors; ",
+      "pre-release": "./node_modules/.bin/github-changes.cmd -o hodumi -r tdgen;"
+  },
+  "author": "",
+  "license": "ISC",
+  "preferGlobal": true,
+  "dependencies": {
+    "commander": "^2.9.0",
+    "handlebars": "^4.0.5"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
 }
