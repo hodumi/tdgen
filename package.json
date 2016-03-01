@@ -8,7 +8,7 @@
   "scripts": {
       "start": "node ./bin/tdgen.js",
       "test": "./node_modules/.bin/mocha test/*.js --colors; ",
-      "pre-release": "./node_modules/.bin/github-changes.cmd -o hodumi -r tdgen;"
+      "pre-release": "./node_modules/.bin/github-changes.cmd -o hodumi -r tdgen -a"
   },
   "author": "",
   "license": "ISC",
