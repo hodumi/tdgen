@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "bin": {
-    "tdgen": "./bin/tdgen"
+    "tdgen": "./bin/tdgen.js"
   },
   "scripts": {
       "start": "node ./bin/tdgen.js",
