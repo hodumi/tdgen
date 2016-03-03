@@ -7,7 +7,7 @@ function range(min, max, step) {
 
     var arr = new Array();
 
-    for(var i = min; i <= max; i+=step) {
+    for(var i = min; i <= max; i+=s) {
 	arr.push(i);
     }
     return arr;
