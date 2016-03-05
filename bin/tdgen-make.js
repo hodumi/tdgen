@@ -15,7 +15,7 @@ if (program.args.length >= 2) {
     var formatFile = path.resolve(program.args[0]);
     var dataFile = path.resolve(program.args[1]);
 
-    tdgen.generate(formatFile, dataFile);
+    tdgen.make(formatFile, dataFile);
 } else {
     program.help();
 }

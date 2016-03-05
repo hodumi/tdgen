@@ -2,7 +2,7 @@ var fs = require('fs');
 var handlebars = require('handlebars');
 
 module.exports = {
-    generate: function(template, data) {
+    make: function(template, data) {
 
 	// load template
 	var source = fs.readFileSync(template, 'utf8');
