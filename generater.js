@@ -33,10 +33,33 @@ function counter(start, step) {
     }
 }
 
+//times回だけ、fを実行
+function loopTimes(times, f) {
+    var arr = new Array();
+
+    for(var i = 1; i <= times; i++) {
+	arr.push(f(i));
+    }
+    return arr;
+}
+
+//arrayの個数分だけ、fを実行
+function loopArray(array, f) {
+    var arr = new Array();
+
+    array.forEach(function(item) {
+	arr.push(f(item));
+    });
+    return arr;
+}
+
 module.exports = {
 
     random: random,
     counter: counter,
+
+    loopTimes: loopTimes,
+    loopArray: loopArray,
 
     uniform: uniform
 };

@@ -50,4 +50,28 @@ describe('generater.js', function() {
 	    assert.equal(gen.random([1,2,3,4,5])(), 3);
 	});
     });
+
+    describe('loopTimes', function() {
+	it('loop 10 times', function() {
+	    var cnt = 0;
+	    var arr = [1,2,3,4,5,6,7,8,9,10];
+
+	    gen.loopTimes(10, function(i) {
+		assert.equal(i, arr[cnt]);
+		cnt++;
+	    });
+	});
+    });
+
+    describe('loopArray', function() {
+	it('loop array', function() {
+	    var cnt = 0;
+	    var arr = [1,2,3,4,5,6,7,8,9,10];
+
+	    gen.loopArray([1,2,3,4,5,6,7,8,9,10], function(i) {
+		assert.equal(i, arr[cnt]);
+		cnt++;
+	    });
+	});
+    });
 });
