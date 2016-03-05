@@ -3,6 +3,7 @@
 
 var tdgen = require('../tdgen.js');
 var program = require('commander');
+var path = require('path');
 
 
 program
@@ -13,7 +14,11 @@ program
 
 if (program.args.length == 2) {
     // run generate file
-    tdgen.generate(program.args[0], program.args[1]);
+
+    var formatFile = path.resolve(program.args[0]);
+    var dataFile = path.resolve(program.args[1]);
+
+    tdgen.generate(formatFile, dataFile);
 } else {
     program.help();
 }
