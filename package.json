@@ -6,15 +6,16 @@
     "tdgen": "./bin/tdgen.js"
   },
   "scripts": {
-      "start": "node ./bin/tdgen.js",
-      "test": "./node_modules/.bin/mocha test/*.js --colors; ",
-      "pre-release": "./node_modules/.bin/github-changes.cmd -o hodumi -r tdgen -a"
+    "start": "node ./bin/tdgen.js",
+    "test": "./node_modules/.bin/mocha test/*.js --colors; ",
+    "pre-release": "./node_modules/.bin/github-changes.cmd -o hodumi -r tdgen -a"
   },
   "author": "",
   "license": "ISC",
   "preferGlobal": true,
   "dependencies": {
     "commander": "^2.9.0",
+    "fs-extra": "^0.26.5",
     "handlebars": "^4.0.5"
   },
   "devDependencies": {

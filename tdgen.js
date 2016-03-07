@@ -1,7 +1,15 @@
-var fs = require('fs');
+var fs = require('fs-extra');
 var handlebars = require('handlebars');
 
 module.exports = {
+    init: function(template, directory) {
+	var tmp = template === undefined ? "default" : template;
+
+	fs.copySync(__dirname + '/template/' + tmp + '', './');
+
+	console.log('Initialized ' + tmp);
+    },
+
     make: function(template, data) {
 
 	// load template
