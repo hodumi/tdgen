@@ -33,6 +33,22 @@ function counter(start, step) {
     }
 }
 
+// 配列から順番に値を出力
+function pop(array) {
+    var cnt = 0;
+    var len = array.length;
+
+    return function() {
+	if (cnt >= len) {
+	    cnt = 0;
+	}
+	var val = array[cnt];
+	cnt++;
+	return val; 
+    }
+}
+
+
 //times回だけ、fを実行
 function loopTimes(times, f) {
     var arr = new Array();
@@ -57,6 +73,7 @@ module.exports = {
 
     random: random,
     counter: counter,
+    pop: pop,
 
     loopTimes: loopTimes,
     loopArray: loopArray,
