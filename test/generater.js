@@ -27,6 +27,31 @@ describe('generater.js', function() {
 	});
     });
 
+
+    describe('pop', function() {
+	it('配列の要素を順番に返す', function() {
+	    var pop = gen.pop([1, 2, 3]);
+
+
+	    assert.equal(pop(), 1);
+	    assert.equal(pop(), 2);
+	    assert.equal(pop(), 3);
+	});
+
+	it('配列の末尾に行くと、最初に戻る', function() {
+	    var pop = gen.pop([1, 2, 3]);
+
+
+	    assert.equal(pop(), 1);
+	    assert.equal(pop(), 2);
+	    assert.equal(pop(), 3);
+	    assert.equal(pop(), 1);
+	    assert.equal(pop(), 2);
+	    assert.equal(pop(), 3);
+	});
+    });
+
+
     describe('uniform', function() {
 	before(function(done) {
 	    Math.random = function() { return 0.5; };
