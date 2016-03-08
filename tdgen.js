@@ -7,7 +7,7 @@ module.exports = {
 
 	fs.copySync(__dirname + '/template/' + tmp + '', './');
 
-	console.log('Initialized ' + tmp);
+	console.log('Initialize ' + tmp);
     },
 
     make: function(template, data, size) {
