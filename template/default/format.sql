@@ -1,4 +1,5 @@
-{{{#data}}}
-insert into {{{tableName}}} {{{#columns}}} {{{.}}} {{{/columns}}} values {{{#values}}} {{{.}}} {{{/values}}};
+id: {{{id}}}
+name: {{{name}}}
+age: {{{age}}}
+note: {{{note}}}
 
-{{{/data}}}

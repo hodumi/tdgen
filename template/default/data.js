@@ -1,41 +1,9 @@
-
-
-
 module.exports = function(gen, res) {
     return {	 
-	data: gen.doTimes(9, function(i) {
-	    var tenpo = '\'02\'';
-	    var kodo = 0;
-	    
-	    switch(i) {
-		case 0:
-
-	    }
-
-	    return {
-		tablename: 'trn_jisseki_uni_datas',
-		columns: [
-		    'uni_jisseki_tenpocode',
-		    'uni_jisseki_haisosbt',
-		    'uni_jisseki_binkbn',
-		    'uni_jisseki_kodokbn',
-		    'uni_jisseki_drivercode',
-		    'uni_jisseki_driverpwd',
-		    'uni_jisseki_drivername',
-		    'uni_jisseki_haisodate',
-		    'uni_jisseki_haisotime',
-		    'uni_jisseki_torokudate',
-		    'uni_jisseki_update',
-		],
-		values: [
-		    tenpo,
-		    4,
-		    1,
-		    kodo,
-		    
-		    
-		],
-	    }}),
+        id: gen.counter(1), // 自動インクリメント(start, step=1)
+            name: gen.random(res.fromFile("name.txt")),// ファイル内の行からランダム出力
+            age: gen.random(res.range(10, 20)), // 範囲からランダム(min, max, step=1)
+            note: "test test test" // 固定値
     };
 };
 
