@@ -10,7 +10,9 @@ module.exports = {
 	console.log('Initialized ' + tmp);
     },
 
-    make: function(template, data) {
+    make: function(template, data, size) {
+	size = size % 1 == 0 ? size : 1;
+
 
 	// load template
 	var source = fs.readFileSync(template, 'utf8');
@@ -24,6 +26,9 @@ module.exports = {
 	// output test-data
 
 	// console.log(data);
-	console.log(tmp(data(require('./generater.js'), require('./resource.js'))));
+	var dataArray = data(require('./generater.js'), require('./resource.js'));
+	for(var i = 1; i <= size; i++) {
+	    console.log(tmp(dataArray));
+	}
     }
 };
